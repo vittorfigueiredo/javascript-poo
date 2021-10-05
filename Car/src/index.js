@@ -1,5 +1,9 @@
-const { CarController } = require('./controllers/car.controller');
+const { CarService } = require('./services/car.service');
 
-const carController = new CarController();
+const carService = new CarService();
 
-console.log(carController.newCar());
+const name = ('Civic');
+const model = ('Honda');
+const year = (2021);
+
+console.log(carService.create(name, model, year));

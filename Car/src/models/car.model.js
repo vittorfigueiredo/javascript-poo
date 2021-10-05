@@ -1,4 +1,4 @@
-class Car {
+class Car extends Gps{
   name;
   model;
   year;
@@ -10,19 +10,20 @@ class Car {
     this.model = model;
     this.year = year;
     this.start = false;
-    this.velocity = 0 + 'km'
-  }
-
-  startCar(start) {
-    this.start = start;
-  }
-
-  stopCar() {
     this.velocity = 0;
   }
 
-  accelerateCar(velocity) {
-    this.velocity = velocity + 'km';
+  start() {
+    this.start = true;
+  }
+
+  stop() {
+    this.velocity = 0;
+    this.start = false;
+  }
+
+  accelerate(velocity) {
+    this.velocity = velocity;
   }
 }
 
